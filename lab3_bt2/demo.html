@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Danh sach san pham</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        td{
+            width: 15%;
+        }
+        td img{
+            width: 35%  ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <hr>
+        <h1 class="text-center">Danh sách sản phẩm</h1>
+        <hr>
+        <form action="" method="POST" class="form-inline row justify-content-around">
+            <div class="left row">
+                <div class="form-group">
+                    <input class="form-control" placeholder="Tìm theo danh muc" id="input_cate">
+                </div>
+                <button type="button" class="btn btn-danger" id="btn">Tìm</button>
+                <div class="form-group">
+                    <input class="form-control" placeholder="Nhập giá dưới" id="input_min">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" placeholder="Nhập giá trên" id="input_max">
+                </div>
+                <button type="button" class="btn btn-danger" id="btn_price">Tìm</button>
+                <button type="button" class="btn btn-primary" onclick="sort_Price('')">Mặc định</button>
+                <button type="button" class="btn btn-primary" onclick="sort_Price('ASC')">Giá tăng dần</button>
+                <button type="button" class="btn btn-primary" onclick="sort_Price('DESC')">Giá giảm dần</button>
+            </div>
+        </form>
+        <hr>
+
+        <hr>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Tên</th>
+                    <th>Danh mục</th>
+                    <th>Giá gốc</th>
+                    <th>Giá sau khi giảm</th>
+                    <th>Ảnh</th>
+                </tr>
+            </thead>
+            <tbody id="tbody-list"></tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="dist/demo.js"></script>
+</body>
+
+</html>
